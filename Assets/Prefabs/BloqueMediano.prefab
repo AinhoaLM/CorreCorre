@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 496782}
   - 212: {fileID: 21208728}
   - 61: {fileID: 6180400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BloqueMediano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.53999996, y: 2, z: 0}
+  m_LocalPosition: {x: -.0910146832, y: -1.21215189, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

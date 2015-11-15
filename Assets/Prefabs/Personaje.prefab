@@ -25,7 +25,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 401138}
   - 212: {fileID: 21223796}
-  - 50: {fileID: 5024258}
   - 58: {fileID: 5899484}
   m_Layer: 0
   m_Name: Cuerpo
@@ -156,6 +155,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 480252}
   - 95: {fileID: 9500242}
+  - 114: {fileID: 11434992}
+  - 50: {fileID: 5051668}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Untagged
@@ -245,6 +246,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &192042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 452014}
+  m_Layer: 0
+  m_Name: ComprobadorSuelo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &401138
 Transform:
   m_ObjectHideFlags: 1
@@ -262,7 +278,7 @@ Transform:
   - {fileID: 432936}
   - {fileID: 493602}
   m_Father: {fileID: 480252}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &411636
 Transform:
   m_ObjectHideFlags: 1
@@ -351,6 +367,18 @@ Transform:
   - {fileID: 427586}
   m_Father: {fileID: 401138}
   m_RootOrder: 0
+--- !u!4 &452014
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0160000008, y: -.763000011, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 480252}
+  m_RootOrder: 0
 --- !u!4 &462112
 Transform:
   m_ObjectHideFlags: 1
@@ -387,6 +415,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 452014}
   - {fileID: 401138}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -439,17 +468,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 432936}
   m_RootOrder: 0
---- !u!50 &5024258
+--- !u!50 &5051668
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116926}
+  m_GameObject: {fileID: 155348}
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_IsKinematic: 0
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -518,12 +547,28 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 8c5adc7c86901b140bdefc8238678455, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11434992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa57e60f288e1d74b8c5049f97b4413d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuerzaSalto: 600
+  comprobadorSuelo: {fileID: 452014}
+  mascaraSuelo:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &21209448
 SpriteRenderer:
   m_ObjectHideFlags: 1
