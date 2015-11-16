@@ -14,6 +14,9 @@ public class ControladorPersonaje: MonoBehaviour {
 
     private Animator animator;
 
+	private bool corriendo = false;
+	public float velocidad = 1f;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -25,6 +28,10 @@ public class ControladorPersonaje: MonoBehaviour {
 	}
 	
     void FixedUpdate(){
+		if(corriendo){
+			GetComponent<Rigidbody2D>().velocity = new Vector2(velocidad, GetComponent<Rigidbody2D>().velocity.y);
+		}
+		animator.SetFloat("VelX",GetComponent<Rigidbody2D>().velocity.x);
         enSuelo = Physics2D.OverlapCircle(comprobadorSuelo.position, comprobadorRadio, mascaraSuelo);
         animator.SetBool("isGrounded", enSuelo);
         if (enSuelo){
@@ -34,14 +41,22 @@ public class ControladorPersonaje: MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	    if ((enSuelo || !dobleSalto) && Input.GetMouseButtonDown(0)){
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, fuerzaSalto);
-            //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, fuerzaSalto));
-            if(!dobleSalto && !enSuelo)
-            {
-                dobleSalto = true;
-
-            }
-        }
+		//Input.GetMouseButtonDown(0) hemos tocado la pantalla con el boton izdo o una tactil
+		if(Input.GetMouseButtonDown(0)){
+			if(corriendo){
+				//Hacemos que salte si puede saltar
+				if ((enSuelo || !dobleSalto) ){
+					GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, fuerzaSalto);
+					//GetComponent<Rigidbody2D>().AddForce(new Vector2(0, fuerzaSalto));
+					if(!dobleSalto && !enSuelo)
+					{
+						dobleSalto = true;
+						
+					}
+				}
+			}else {
+				corriendo = true;
+			}
+		}
 	}
 }
