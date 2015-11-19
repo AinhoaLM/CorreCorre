@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21249828}
   - 58: {fileID: 5815296}
   - 95: {fileID: 9512814}
+  - 114: {fileID: 11441680}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -24,8 +25,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102302}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.49133396, y: .624656022, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .38268277, w: -.923879862}
+  m_LocalPosition: {x: .560000002, y: -2.51999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38,7 +39,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 102302}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: -.0199999996, y: -.239999995}
   serializedVersion: 2
@@ -60,6 +61,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11441680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9767047348c62c5479b1b1f70d19d5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntosGanados: 5
 --- !u!212 &21249828
 SpriteRenderer:
   m_ObjectHideFlags: 1
