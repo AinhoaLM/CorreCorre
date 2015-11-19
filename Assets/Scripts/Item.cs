@@ -18,10 +18,14 @@ public class Item : MonoBehaviour
     }
 
     // OnTriggerEnter2D is called when the Collider2D other enters the trigger (2D physics only)
-    public void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        NotificationCenter.DefaultCenter().PostNotification(this, "IncrementarPuntos", puntosGanados);
-        Destroy(gameObject);
-        //Debug.Log("Tocado");
+        if(collision.tag == "Player")
+        {
+            NotificationCenter.DefaultCenter().PostNotification(this, "IncrementarPuntos", puntosGanados);
+            Destroy(gameObject);
+            //Debug.Log("Tocado");
+        }
+
     }
 }
