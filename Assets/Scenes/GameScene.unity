@@ -122,9 +122,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400718, guid: 4bbd0e3425939ea418d7355a6a6b68e9, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11447792, guid: 4bbd0e3425939ea418d7355a6a6b68e9, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11447792, guid: 4bbd0e3425939ea418d7355a6a6b68e9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4bbd0e3425939ea418d7355a6a6b68e9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &475298864
@@ -164,7 +169,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496782, guid: f7a806d7fffb3ca4baff46997c5bfed5, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7a806d7fffb3ca4baff46997c5bfed5, type: 2}
@@ -297,7 +302,7 @@ GameObject:
   - 50: {fileID: 1521941445}
   - 114: {fileID: 1521941446}
   m_Layer: 0
-  m_Name: Destructor
+  m_Name: DestructorBloques
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -369,6 +374,7 @@ GameObject:
   - 81: {fileID: 1726226686}
   - 114: {fileID: 1726226691}
   - 114: {fileID: 1726226692}
+  - 114: {fileID: 1726226693}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -473,6 +479,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wantedAspectRatio: 1.77777779
+--- !u!114 &1726226693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726226685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f975b6a250edf3418bdbbd73451579c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1827452366
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +502,7 @@ GameObject:
   - 50: {fileID: 1827452369}
   - 114: {fileID: 1827452368}
   m_Layer: 0
-  m_Name: Destructor (1)
+  m_Name: DestructorPersonaje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

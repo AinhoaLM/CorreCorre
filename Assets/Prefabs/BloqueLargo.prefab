@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400718}
   - 212: {fileID: 21288690}
   - 61: {fileID: 6116638}
+  - 114: {fileID: 11447792}
   m_Layer: 8
   m_Name: BloqueLargo
   m_TagString: Untagged
@@ -42,6 +43,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 7.4909091, y: .609090924}
+--- !u!114 &11447792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818ff4bc0ee53e8479e1fc23efd69e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntosGanados: 1
 --- !u!212 &21288690
 SpriteRenderer:
   m_ObjectHideFlags: 1
