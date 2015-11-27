@@ -23,9 +23,11 @@ public class Destructor : MonoBehaviour
         //Para destruir el personaje cuando se caiga
         if(other.tag == "Player")
         {
-            Debug.Break();
-            //POR HACER...  HACER QUE SE MUESTRE LA PUNTUACIÓN
-            //HA MUERTO EL PERSONAJE
+            NotificationCenter.DefaultCenter().PostNotification(this,"PersonajeHaMuerto");
+            GameObject personaje = GameObject.Find("Personaje");
+            personaje.SetActive(false);
+            //Debug.Break();
+            
         } else{
             //Para destruir los bloques
             Destroy(other.gameObject);
